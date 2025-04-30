@@ -4,10 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic-Tac-Toe</title>
-    <script src="script.js" delay></script>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="container">
+        <div class="turn"></div>
+        <div class="board"></div>
+    </div>
+    <div id="start-game-modal" class="modal">
+        <div class="modal-content">
+            <h2>Start New Game</h2>
+            <form id="start-form">
+                <label for="player-one">Player 1's Name:</label>
+                <input type="text" id="player-one" placeholder="Player One" required/>
+                <label for="player-two">Player 2's Name:</label>
+                <input type="text" id="player-two" placeholder="Player Two" required/>
+                <button id="start-button" type="submit">Start Game</button>
+            </form>
+        </div>
+    </div>
+    <div id="result-modal" class="modal hidden">
+        <div class="modal-content result-modal-content">
+          <h2 id="result-text">Player Wins!</h2>
+          <button id="close-result">Play Again</button>
+        </div>
+    </div>
+    <audio id="background-music" loop>
+        <source src="audio/tumba.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
 </body>
 </html>
